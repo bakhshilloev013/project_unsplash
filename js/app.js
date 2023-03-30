@@ -34,12 +34,12 @@ function renderPost(obj) {
 let i = 0;
 async function renderCard(item, index) {
     const indexArr = [];
-    const {urls: {small}} = item;
+    const {urls: {small, full}} = item;
     indexArr.push(index);
     await clearColumns();
     const post = document.createElement("a");
     post.classList.add("post");
-    post.href = small;
+    post.href = full;
     post.innerHTML = `
         <img src="${small}" alt="">
     `;
